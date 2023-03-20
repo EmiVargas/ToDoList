@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de tareas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Lista de tareas</h1>
+      <div class="tareaList">
+        <form>
+          <input type="text" placeholder="Agregá tu tarea aquí" />
+          <button class="btn btn-success btn-add">Agregar</button>
+        </form>
+        <div class="selects">
+        <label for="select">Elegí el día para realizarla</label>
+        <select required class="dia">
+          <option selected disabled>Día</option>
+          <option>Hoy</option>
+          <option>Mañana</option>
+          <option>Después</option>
+        </select>
+        <label for="categoria">Elegí una categoría</label>
+        <select required class="categoria">
+          <option selected disabled>Categoría</option>
+          <option>Compras</option>
+          <option>Estudios</option>
+          <option>Deportes</option>
+          <option>Ocio</option>
+          <option>Otra</option>
+          <option>Agregar una categoría</option>
+        </select>
+      </div>
+      </div>
+    </div>
+    <div class="day-container">
+      <div class="card today">
+        <div class="h2-cont">
+          <h2>Para hoy</h2>
+        </div>
+        <div class="li-container">
+          <ul class="ulToday" id="ulTod"></ul>
+        </div>
+        <div class="empty-today">
+          <p>No tienes tareas pendientes</p>
+        </div>
+      </div>
+      <div class="card tom">
+        <div class="h2-cont">
+        <h2>Para mañana</h2>
+      </div>
+        <div class="li-container">
+          <ul class="ulTom"></ul>
+        </div>
+        <div class="empty-tom">
+          <p>No tienes tareas pendientes</p>
+        </div>
+      </div>
+      <div class="card pm">
+        <div class="h2-cont">
+        <h2>Para después</h2>
+      </div>
+        <div class="li-container">
+          <ul class="ulPm"></ul>
+        </div>
+        <div class="empty-pm">
+          <p>No tienes tareas pendientes</p>
+        </div>
+      </div>
+    </div>
+    <div class="completed">
+      <div class="h2-cont">
+      <h2>Tareas completadas</h2>
+      </div>
+      <div class="empty">
+        <p>No tienes tareas completadas</p>
+      </div>
+      <ul class="completed-ul" id="completedUl"></ul>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
