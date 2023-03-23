@@ -27,7 +27,7 @@ categoria.addEventListener("change", (e) => {
 
   if (categoria.value == "Agregar una categoría") {
     div.className = "inpDiv";
-    label.textContent = "*Nueva categoría ";
+    label.textContent = "-Nueva categoría";
     div.appendChild(label);
     div.appendChild(newInput);
     newInput.display = "block";
