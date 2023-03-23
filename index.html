@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista de tareas</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handlee&family=Delicious+Handrawn">
   </head>
   <body>
     <div class="container">
-      <h1>Lista de tareas</h1>
+      <h1>LISTA DE TAREAS</h1>
       <div class="tareaList">
         <form>
           <input type="text" placeholder="Agregá tu tarea aquí" />
@@ -18,7 +19,7 @@
         <div class="selects">
         <label for="select">Elegí el día para realizarla</label>
         <select required class="dia">
-          <option selected disabled>Día</option>
+          <option selected disabled style="font-family: 'Handlee';">Día</option>
           <option>Hoy</option>
           <option>Mañana</option>
           <option>Después</option>
@@ -42,7 +43,7 @@
           <h2>Para hoy</h2>
         </div>
         <div class="li-container">
-          <ul class="ulToday" id="ulTod"></ul>
+          <ul class="ulToday"></ul>
         </div>
         <div class="emptyTo">
           <p>No tienes tareas pendientes</p>
