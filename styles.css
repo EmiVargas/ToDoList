@@ -1,16 +1,17 @@
 body {
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(160, 65, 65);
+  font-family: 'Handlee';
+  background-color: rgb(116, 48, 48);
   color: white;
 }
 
 h1 {
   color: white;
   text-align: center;
+  font-family: 'Delicious Handrawn';
 }
 
 h2{
@@ -20,13 +21,20 @@ h2{
 .h2-cont{
 margin: 0 7rem;
 margin-bottom: 2.3rem;
+border-bottom: 3px solid rgb(116, 48, 48);
 }
 
 .container {
   width: 40%;
-  background-color: rgb(160, 65, 65);
+  background-color: rgb(61, 113, 129);
   margin: 30px auto;
   padding: 30px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 1em/5em ;
+}
+
+.container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
 }
 
 .tareaList {
@@ -61,7 +69,7 @@ li {
   border-radius: 5px;
   padding: 5px 10px;
   display: flex;
-  justify-content: space-between;
+  flex: 1 50% 50%;
 }
 
 li p {
@@ -69,15 +77,31 @@ li p {
   text-decoration: none;
   margin: 5px 10px;
   font-weight: bold;
+  overflow-x: auto;
+  padding: 1px 1px;
+}
+
+::placeholder{
+  font-family: 'Handlee';
+  font-weight: bold;
+  font-size: 15px;
+}
+
+option{
+  font-family: 'Handlee';
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .btn-add {
   background-color: rgb(127, 168, 127);
   color: white;
-  font-family: system-ui, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: small;
+  font-family: 'Handlee';
+  font-size:15px;
   padding: 10px;
   border: solid 1px rgb(0, 0, 0);
+  font-weight: bold;
+  border-radius: 10%;
 }
 
 .selects{
@@ -89,6 +113,9 @@ select {
   padding: 5px 2px;
   border: solid 2px rgb(0, 0, 0,);
   background-color: rgba(255, 255, 255, 0.85);
+  font-family: 'Handlee';
+  font-weight: bold;
+  font-size: 15px;
 }
 
 select:hover{
@@ -107,9 +134,13 @@ select:hover{
   border: none;
   border-radius: 10px;
   color: white;
-  font-family: system-ui, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 1rem;
+  font-family: 'Handlee';
+  font-weight: bold;
+  font-size: 15px;
   outline: none;
+  height:fit-content;
+  margin: auto;
+  margin-left: auto;
 }
 
 .btn-completed {
@@ -118,9 +149,12 @@ select:hover{
   border: none;
   border-radius: 10px;
   color: white;
-  font-family: system-ui, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 1rem;
+  font-family: 'Handlee';
+  font-weight: bold;
+  font-size: 15px;
   outline: none;
+  height:fit-content;
+  margin: auto;
 }
 
 .btn-completed:hover{
@@ -141,44 +175,46 @@ color:white;
 
 .day-container{
   display: flex;
-  justify-content: space-evenly;
   column-gap: 10px;
   padding: 0 10px;
+  margin: 0px 0px;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   text-align: center;
   padding: 6px 5px;
-  width: 300px;
+  flex: 1 30%;
+  border-radius: 0.5em/0.5em ;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
 }
 
 .pm{
   background-color: rgb(187, 86, 68);
-  flex: 1 30%;
 }
 
 .tom{
   background-color:rgb(187, 125, 68);
-  flex: 1 30%;
 }
 
 .today{
   background-color:rgb(187, 155, 68);
-  flex: 1 30%;
 }
 
 .completedDiv{
   padding: 0 15px;
   text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color:rgba(99, 134, 59, 0.548) ;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  background-color:rgba(91, 196, 126, 0.548) ;
   margin: 0px 10px;
+  border-radius: 0.5em/0.5em ;
+}
+
+.completedDiv:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
 }
 
 .emptyCo{
@@ -198,7 +234,7 @@ color:white;
 
 .inpDiv{
   display: flex;
-  flex: 1 50%;
+  margin-top: 6px;
 }
 
 .completed{
@@ -209,4 +245,55 @@ color:white;
 
 .none{
   display: none;
+}
+
+legend{
+  font-weight: bold;
+  margin: auto;
+}
+
+label{
+  margin-right: 6px;
+}
+
+@media(max-width: 768px) {
+  .day-container{
+   flex-direction: column;
+   justify-content: center;
+   width:100%;
+   margin: auto;
+  }
+  .card{
+    width: 95%;
+  }
+  body{
+    font-size: 150%;
+  }
+  .completedDiv{
+    font-size: 70%;
+  }
+}
+
+@media(max-width:915px){
+  .day-container{
+    font-size: 60%;
+   }
+   h1{
+    font-size: 80%;
+   }
+  .btn-delete, .btn-add, .btn-completed{
+    font-size: 70%;
+   }
+}
+
+@media(max-width:1050px){
+  .day-container{
+    font-size: 70%;
+   }
+   h1{
+    font-size: 90%;
+   }
+  .btn-delete, .btn-add, .btn-completed{
+    font-size: 80%;
+   }
 }
