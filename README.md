@@ -12,4 +12,5 @@ TECNOLOGÍAS UTILIZADAS
 DEPLOYMENT- GITHUB PAGES
 
 https://emivargas.github.io/toDoList/
+
 ![webpage](https://github.com/EmiVargas/toDoList/assets/89800408/52630437-f4cc-4b37-9e4d-0bcdb7db9aa4)
